@@ -1,0 +1,49 @@
+===============
+=== READ ME ===
+===============
+
+Solucionador de problemas genérico capaz de executar diferentes tipos de pesquisas.
+Atualmente realiza as seguintes buscas:
+
+A * Pesquisa ('asm' ou 'aso' dependendo da heurística) (apenas utilizável com 8puzzle)
+
+Você deve especificar o tipo de pesquisa como um argumento para o
+Binário do programa principal (Solver).
+
+A * A pesquisa pode usar uma de duas heurísticas:
+
+Número Fora do Lugar ('aso')
+Distância Manhattan ('asm')
+
+O solucionador é genérico e pode resolver diferentes tipos de problemas.
+Atualmente pode resolver os seguintes enigmas:
+
+Fazendeiro, lobo, cabra, repolho (fwgc)
+8-puzzle
+
+Compilação:
+Javac Solver.java
+
+Uma nota sobre exemplos de linha de comando:
+Parâmetros em <> significam que você escolhe um dos
+Parâmetros em [] significa que o parâmetro é opcional
+-Xmx1024 dá a máquina virtual Java mais memória para executar, e é necessário para este programa
+
+Execução:
+Se um estado da placa inicial for passado como um parâmetro de linha de comando,
+Será assumido que o usuário tenta executar 8-quebra-cabeça. Assim, para invocar
+Uma solução para fwgc:
+
+Java -Xmx1024m Solver <dfs / bfs>
+
+E para 8-puzzle
+
+Java -Xmx1024m Solver <dfs / bfs> <placa inicial>
+
+Para executar com depuração, adicione -d ao início:
+Java -Xmx1024m Solver -d <dfs / bfs> [placa inicial]
+
+Exemplo de uso para aso com depuração ativada:
+Java -Xmx1024m Solver -d aso 5 6 8 4 0 1 2 3 7
+Exemplo de uso para asm sem depuração:
+Java -Xmx1024m Solver asm 5 6 8 4 0 1 2 3 7
