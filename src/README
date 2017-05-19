@@ -15,12 +15,6 @@ A * A pesquisa pode usar uma de duas heurísticas:
 Número Fora do Lugar ('aso')
 Distância Manhattan ('asm')
 
-O solucionador é genérico e pode resolver diferentes tipos de problemas.
-Atualmente pode resolver os seguintes enigmas:
-
-Fazendeiro, lobo, cabra, repolho (fwgc)
-8-puzzle
-
 Compilação:
 Javac Solver.java
 
@@ -31,12 +25,7 @@ Parâmetros em [] significa que o parâmetro é opcional
 
 Execução:
 Se um estado da placa inicial for passado como um parâmetro de linha de comando,
-Será assumido que o usuário tenta executar 8-quebra-cabeça. Assim, para invocar
-Uma solução para fwgc:
-
-Java -Xmx1024m Solver <dfs / bfs>
-
-E para 8-puzzle
+Será assumido que o usuário tenta executar 8-quebra-cabeça. Assim, para invocar 8-puzzle:
 
 Java -Xmx1024m Solver <dfs / bfs> <placa inicial>
 
